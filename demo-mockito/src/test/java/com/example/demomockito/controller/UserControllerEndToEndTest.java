@@ -31,9 +31,6 @@ class UserControllerEndToEndTest {
 
     protected ClientAndServer mockServer;
 
-    @MockBean
-    UserService userService;
-
     @Autowired
     RestTemplate restTemplate;
 
@@ -41,13 +38,6 @@ class UserControllerEndToEndTest {
     public void initMockClientService(ClientAndServer clientAndServer) {
         this.mockServer = clientAndServer;
         this.mockServer.reset();
-    }
-
-    @Test
-    void test(){
-        when(userService.getUserInfo("tao")).thenReturn(Optional.empty());
-        JsonNode result = restTemplate.getForObject("http://localhost:8989/user/tao", JsonNode.class);
-        assertEquals("9999", result.get("returnCode").asText());
     }
 
 
