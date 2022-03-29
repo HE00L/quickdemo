@@ -6,11 +6,11 @@
   },
   "inbounds": [
     {
-      "port": 5188,
+      "port": 51888,
       "protocol": "shadowsocks",
       "settings": {
         "method": "aes-256-gcm",
-        "password": "2wsx@WSX",
+        "password": "www.bannedbook.org",
         "network": "tcp,udp",
         "level": 0
       }
